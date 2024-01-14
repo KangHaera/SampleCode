@@ -191,13 +191,13 @@ void UCoinShop_Manager::AddCoinShopItem(const FCoinShopMain& InCoinShopItemData)
 	if (CreateData == nullptr && CreateData->IsValidLowLevel() == false)
 	{
 		UE_LOG(LogTemp, Warning, TEXT("CreateData is nullptr"));
-		continue;
+		return;
 	}
 
 	FItemMain* CoinItemData = Table->GetItemMainDataByID(InCoinShopItemData.item_idx);
 	if (CoinItemData == nullptr)
 	{
-		continue;
+		return;
 	}
 
 	if (CoinItemData.icon_path.Get() == nullptr)
@@ -208,7 +208,7 @@ void UCoinShop_Manager::AddCoinShopItem(const FCoinShopMain& InCoinShopItemData)
 	FItemMain* ChangeItemData = Table->GetItemMainDataByID(InCoinShopItemData.change_item_idx);
 	if (ChangeItemData == nullptr)
 	{
-		continue;
+		return;
 	}
 
 	if (ChangeItemData.icon_path.Get() == nullptr)
@@ -230,7 +230,7 @@ void UCoinShop_Manager::AddCategoryItem(const FCoinShopCategory& InCategoiryData
 	FItemMain* CoinItemData = Table->GetItemMainDataByID(InCategoiryData.item_idx);
 	if (CoinItemData == nullptr)
 	{
-		continue;
+		return;
 	}
 
 	if (CoinItemData.icon_path.Get() == nullptr)
