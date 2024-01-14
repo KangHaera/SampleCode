@@ -50,12 +50,12 @@ private:
 #pragma endregion listview event
 
 #pragma region onclick event
-	UFUNCTION() void OnClick_AllRefresh();							          		//	초기화 버튼
+	UFUNCTION() void OnClick_AllRefresh();					//	초기화 버튼
 #pragma endregion onclick event 
 
 #pragma region callback event
-	void CallBack_Update();										                     		//	+, - 버튼 인풋
-	void CallBack_ClickTab(const int32& InTabIndex);					        //	탭 변경 
+	void CallBack_Update();							//	+, - 버튼 인풋
+	void CallBack_ClickTab(const int32& InTabIndex);			//	탭 변경 
 	void CallBack_Buy(const int32 InTableID, const int32 InCount);		//	아이템 교환
 #pragma endregion callback event
 
